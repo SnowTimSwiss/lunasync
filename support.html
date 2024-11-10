@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - LunaSync</title>
+    <style>
+        /* Grundlegendes Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        h1, h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .cta-button {
+            background-color: #00bcd4;
+            padding: 12px 24px;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            background-color: #0097a7;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 30px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        header nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Support-Sektion */
+        section {
+            margin-top: 50px;
+        }
+
+        .support-entry {
+            background-color: #00bcd4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .support-entry h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="LunaSync Logo" class="logo-img" style="width: 50px; vertical-align: middle;">
+                <h1 style="display: inline; font-size: 32px; margin-left: 10px;">LunaSync</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="changelog.html">Changelog</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="index.html#contact">Kontakt</a></li>
+                    <li><a href="index.html#advantages-disadvantages">Warum wir?</a><li></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Support</h2>
+            <div class="support-entry">
+                <h3>Wie viel kostet LunaSync Cloud?</h3>
+                <p>Kontaktieren sie uns gerne, wir werden dann individuell ein Angebot ausarbeiten.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Sie finden ihre keine Antwort im faq?</h2>
+            <p>kontaktieren sie uns gerne über (unsere e-mail) oder über das folgende Formular. Wir werden uns so schnell wie möglich melden!</p>
+            
+            <form action="https://formspree.io/f/xbljydoy" method="POST" style="background-color: #1c1c1c; padding: 20px; border-radius: 8px; color: white;">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #333; color: white; border: 1px solid #555; border-radius: 4px;"><br>
+    
+                <label for="email">E-Mail:</label><br>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #333; color: white; border: 1px solid #555; border-radius: 4px;"><br>
+    
+                <label for="message">Nachricht:</label><br>
+                <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #333; color: white; border: 1px solid #555; border-radius: 4px;"></textarea><br>
+    
+                <button type="submit" class="cta-button">Absenden</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        
+        <div class="container">
+            <p>&copy; 2024 LunaSync | <a href="agb.html" style="color: white;">AGB</a> | <a href="datenschutz.html" style="color: white;">Datenschutz</a></p>
+        </div>
+    
+    </footer>
+
+</body>
+</html>

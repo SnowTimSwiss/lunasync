@@ -1,0 +1,344 @@
+    <!DOCTYPE html>
+    <html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Willkommen - LunaSync</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            /* Grundlegendes Styling */
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #121212;
+                color: white;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+
+            .container {
+                width: 85%;
+                margin: 0 auto;
+                padding: 40px 0;
+            }
+
+            h1, h2 {
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            a {
+                color: #00bcd4; /* Einheitliches Blau */
+                text-decoration: none;
+            }
+
+            .cta-button {
+                background-color: #00bcd4; /* Einheitliches Blau */
+                padding: 12px 24px;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                text-align: center;
+                transition: background-color 0.3s ease;
+                font-size: 16px;
+            }
+
+            .cta-button:hover {
+                background-color: #0097a7; /* Dunklerer Blauton für Hover-Effekt */
+            }
+
+            header {
+                background-color: #333;
+                padding: 15px 0;
+            }
+
+            header .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            header nav ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+            }
+
+            header nav ul li {
+                margin-left: 30px;
+            }
+
+            header nav ul li a {
+                color: #fff;
+                font-weight: bold;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+
+            header nav ul li a:hover {
+                color: #00bcd4; /* Einheitliches Blau für Links */
+            }
+
+            /* Sektion für "Vorteile und Nachteile" */
+            #advantages-disadvantages {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 50px;
+                gap: 30px;
+            }
+
+            .adv-disadv-box {
+                width: 48%;
+                padding: 25px;
+                background-color: #00bcd4; /* Einheitliches Blau */
+                border-radius: 12px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                transition: box-shadow 0.3s ease;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .adv-disadv-box .box-title {
+                font-size: 22px;
+                font-weight: bold;
+                background-color: #0097a7; /* Dunklerer Blauton für Box-Titel */
+                color: white;
+                padding: 16px;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .adv-disadv-box ul {
+                list-style-type: disc;
+                margin-left: 20px;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .adv-disadv-box ul li {
+                margin-bottom: 10px;
+            }
+
+            /* Responsives Design */
+            @media (max-width: 768px) {
+                #advantages-disadvantages {
+                    flex-direction: column;
+                }
+
+                .adv-disadv-box {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+            }
+
+            footer {
+                background-color: #333;
+                padding: 20px 0;
+                text-align: center;
+                color: white;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+
+            /* Modal */
+            .modal {
+                display: none; /* Anfangs ausgeblendet */
+                position: fixed;
+                z-index: 1; /* Über allen anderen Inhalten */
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.8); /* Dunkler Hintergrund */
+                justify-content: center;
+                align-items: center;
+            }
+
+            .modal-content {
+                max-width: 90%;
+                max-height: 90%;
+                margin: auto;
+                display: block;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+                border-radius: 8px;
+            }
+
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #fff;
+                font-size: 40px;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            /* Styling für die Screenshots */
+            .screenshots-container {
+                display: flex;
+                gap: 20px;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+
+            .screenshot {
+                width: 30%;
+                height: auto;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+
+            .screenshot:hover {
+                transform: scale(1.05);
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="LunaSync Logo" class="logo-img" style="width: 50px; vertical-align: middle;">
+                    <h1 style="display: inline; font-size: 32px; margin-left: 10px;">LunaSync</h1>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Startseite</a></li>
+                        <li><a href="changelog.html">Changelog</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="index.html#contact">Kontakt</a></li>
+                        <li><a href="index.html#advantages-disadvantages">Warum wir?</a><li></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="home">
+            <div class="container">
+                <h2>Willkommen bei LunaSync!</h2>
+                <p>Die Lösung für Sicheren, preiswerten und Intuitiven Cloud-Speicherplatz für jede Schule!</p>
+                <a href="#contact" class="cta-button">Kontaktieren Sie uns</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>Unsere Mission</h2>
+                <p>Unsere Mission ist es, Schweizer Schulen eine benutzerfreundliche, sichere und zuverlässige Plattform für das Speichern und Teilen von Dateien in der Cloud bereitzustellen. Wir möchten den digitalen Austausch und die Zusammenarbeit in Bildungseinrichtungen fördern, indem wir eine maßgeschneiderte Lösung anbieten, die speziell auf die Bedürfnisse von Schulen abgestimmt ist. Unser Ziel ist es, Lehrkräften, Schülern und Schulverwaltungen eine moderne, datenschutzkonforme Infrastruktur zur Verfügung zu stellen, die den Anforderungen der Bildungseinrichtungen gerecht wird und den Weg für eine zukunftsorientierte Bildung ebnet, die in der Schweiz entwickelt und betrieben wird.</p>
+            </div>
+        </section>
+
+        <section id="screenshots">
+            <div class="container">
+                <h2>Einblicke in die LunaSync Software</h2>
+                <div class="screenshots-container">
+                    <img src="img/screenshot1.png" alt="Screenshot 1" class="screenshot">
+                    <img src="img/screenshot2.png" alt="Screenshot 2" class="screenshot">
+                    <img src="img/screenshot3.png" alt="Screenshot 3" class="screenshot">
+                </div>
+            </div>
+
+        <section id="advantages-disadvantages">
+            <div class="adv-disadv-box">
+                <div class="box-title">Vorteile</div>
+                <ul>
+                    <li>Benutzerfreundliche Software</li>
+                    <li>Ihre Daten sind auf unseren Servern in der Schweiz gespeichert</li>
+                    <li>Datenschutzkonform (CH-Recht)</li>
+                    <li>Keine Datenweitergabe an Drittparteien -> Ihre Daten bleiben privat</li>
+                    <li>guter und schneller Support</li>
+                    <li>Massgeschneiderte Lösungen für die Bedürfnisse jeder einzelnen Schule</li>
+                    <li>Kostenlose Schulung für alle Personen die mit LunaSync arbeiten werden</li>
+                    <li>Es keine Werbung oder zusätzliche, möglicherweise störende Funktionen, die nicht relevant sind</li> 
+                </ul>
+            </div>
+            <div class="adv-disadv-box">
+                <div class="box-title">Nachteile</div>
+                <ul>
+                    <li>Ausfallzeiten können häufiger und länger sein als bei größeren Anbietern wie Microsoft oder Dropbox, da wir eine kleinere Organisation sind</li>
+                    <li>Weniger integrierte Features, da wir uns zurzeitt auf die Basics konzentrieren</li>
+                    <li>Support kann langsamer sein, wir geben aber das Beste!</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Kontaktieren Sie uns</h2>
+                <p>Wir freuen uns, von Ihnen zu hören! Lassen sie sich eine kostenlose, unverbintliche Offerte anfertigen.</p>
+                
+                <form action="https://formspree.io/f/xldenggz" method="POST" style="background-color: #1c1c1c; padding: 20px; border-radius: 8px; color: white;">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #333; color: white; border: 1px solid #555; border-radius: 4px;"><br>
+        
+                    <label for="email">E-Mail:</label><br>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #333; color: white; border: 1px solid #555; border-radius: 4px;"><br>
+        
+                    <label for="message">Nachricht:</label><br>
+                    <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #333; color: white; border: 1px solid #555; border-radius: 4px;"></textarea><br>
+        
+                    <button type="submit" class="cta-button">Absenden</button>
+                </form>
+            </div>
+        </section>
+        
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 LunaSync | 
+                    <a href="agb.html" style="color: white;">AGB</a> | 
+                    <a href="datenschutz.html" style="color: white;">Datenschutz</a>
+                </p>
+            </div>
+        </footer>
+        
+
+        <!-- Modal für die Screenshots -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <script>
+            // Modal öffnen und schließen
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            var closeBtn = document.getElementsByClassName("close")[0];
+
+            var screenshots = document.querySelectorAll(".screenshot");
+            screenshots.forEach(function(screenshot) {
+                screenshot.onclick = function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+            });
+
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+    </body>
+    </html>
