@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willkommen - LunaSync</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <!-- Logo und Name als Link zur Startseite -->
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="LunaSync Logo" class="logo-img">
+                <h1>LunaSync</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="changelog.html">Changelog</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="index.html#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Willkommen bei LunaSync!</h2>
+            <p>Die Lösung für Sicheren, preiswerten und Intuitiven Cloud-Speicherplatz für jede Schule!</p>
+            <a href="#contact" class="cta-button">Kontaktieren Sie uns</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Unsere Mission</h2>
+            <p>Unsere Mission ist es, Schweizer Schulen eine benutzerfreundliche, sichere und zuverlässige Plattform für das Speichern und Teilen von Dateien in der Cloud zur Verfügung zu stellen. Wir möchten den digitalen Austausch und die Zusammenarbeit in Bildungseinrichtungen fördern, indem wir eine einfache Lösung bieten, die den individuellen Bedürfnissen der Schulen gerecht wird. Dabei setzen wir auf höchste Sicherheitsstandards, um den Schutz sensibler Daten zu gewährleisten. Unser Ziel ist es, den Lehrkräften, Schülern und Schulverwaltungen eine moderne Infrastruktur zu bieten, die den digitalen Wandel in der Bildung unterstützt und zugleich den hohen Anforderungen an Datenschutz und Datensicherheit entspricht</p>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <form action="mailto:deine-email@example.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">E-Mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Nachricht:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Absenden" class="cta-button">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LunaSync</p>
+        </div>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector("header");
+
+        window.addEventListener("scroll", function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Nach unten scrollen – Navbar verstecken
+                navbar.classList.add("hidden");
+            } else {
+                // Nach oben scrollen – Navbar anzeigen
+                navbar.classList.remove("hidden");
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
+
+</body>
+</html>
